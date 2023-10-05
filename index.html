@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./images/logo.png" class="logo">
+                <ul>
+                   <li><a href="#">Food</a></li>
+                   <li><a href="#">Exersize</a></li>
+                   <li><a href="#">Anmies</a></li>
+                   <li><a href="#">Travel</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>
+                    DL - ARCHITECT
+                </p>
+                <h1>Hi, my name is <span>OM</span> <br> I love AI/ML</h1>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="about">
+       <div class="container">
+           <div class="row">
+               <div class="about-col-1">
+                <img src="images/user.png" alt="">
+               </div>
+               <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione soluta at fuga voluptatibus repellat aperiam eos blanditiis est ullam minima provident distinctio, sunt nesciunt, modi atque accusamus, cupiditate dolores ipsam?</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onClick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onClick="opentab('Experience')">Experience </p>
+                    <p class="tab-links" onClick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id='skills'>
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>AI/ML</span><br>Training DNN models</li>
+                        <li><span>Problem Solving</span><br>Competitive - Programming</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id='Experience'>
+                    <ul>
+                        <li><span>2020-2024</span><br>React </li>
+                        <li><span>Tutorial Hell</span><br>up-untill now</li>
+                        <li><span>Learning Cool Stuff </span><br>2002 to hopefully 2070</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id='Education'>
+                    <ul>
+                        <li><span>2020-2024</span><br>B.tech CSE @RCOEM</li>
+                        <li><span>12th</span><br>Santaji Mahavidhyalaya </li>
+                        <li><span>10th</span><br>Narayana Vidhyalayam</li>
+                    </ul>
+                </div>
+               </div>
+           </div>
+       </div>
+    </div>
+
+    <div class="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="service-list">
+                
+            </div>
+        </div>
+    </div>
+
+   
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links')
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tab_name)
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tab_name).classList.add("active-tab");
+
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>
